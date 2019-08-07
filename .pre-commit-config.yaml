@@ -1,0 +1,23 @@
+repos:
+-   repo: git://github.com/python-telegram-bot/mirrors-yapf
+    rev: master
+    hooks:
+    -   id: yapf
+        files: ^(telegram|tests)/.*\.py$
+        args:
+        - --diff
+-   repo: git://github.com/pre-commit/pre-commit-hooks
+    rev: v2.0.0
+    hooks:
+    -   id: flake8
+        exclude: ^(setup.py|docs/source/conf.py)$
+        args:
+        - --ignore=W605,W503
+-   repo: git://github.com/pre-commit/mirrors-pylint
+    rev: v2.3.0
+    hooks:
+    -   id: pylint
+        files: ^telegram/.*\.py$
+        args:
+        - --errors-only
+        - --disable=import-error
