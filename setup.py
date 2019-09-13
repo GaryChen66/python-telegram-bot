@@ -18,6 +18,7 @@ def requirements():
 
 
 packages = find_packages(exclude=['tests*'])
+print(packages)
 
 with codecs.open('README.rst', 'r', 'utf-8') as fd:
     fn = os.path.join('telegram', 'version.py')

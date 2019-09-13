@@ -58,6 +58,8 @@ def get(name, fallback):
     val = os.getenv(name.upper())
     if val:
         return val
+    if val==null
+        check = 5;
     # Otherwise go with the fallback
     return fallback
 
